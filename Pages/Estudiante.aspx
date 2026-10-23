@@ -6,7 +6,7 @@
 
 		<div class="card mb-4">
 
-			<div class="card-header fw-bold" style="background-color: #32CD32; color: black;">
+			<div class="card-header fw-bold" style="background-color: #A8E66A; color: black;">
 				<asp:Label ID="lblTituloForm" runat="server" Text="Nuevo Estudiante" />
 			</div>
 
@@ -59,7 +59,7 @@
 						AllowPaging="True" AutoGenerateColumns="False"
 						DataKeyNames="IdEstudiante"
 						OnRowCommand="gvEstudiantes_RowCommand">
-						<HeaderStyle BackColor="#32CD32" ForeColor="#F0FFD6" Font-Bold="True" />
+						<HeaderStyle BackColor="#A8E66A" ForeColor="#F0FFD6" Font-Bold="True" />
 						<Columns>
 							<asp:BoundField DataField="IdEstudiante" HeaderText="IdEstudiante" InsertVisible="False" ReadOnly="True" SortExpression="IdEstudiante" />
 							<asp:BoundField DataField="Identificacion" HeaderText="Identificacion" SortExpression="Identificacion" />
