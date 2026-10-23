@@ -20,13 +20,13 @@
             _estudianteDB.Update(p)
         End If
     End Sub
-
-    Public Sub EliminarEstudiante(id As Integer)
+    Public Function EliminarEstudiante(id As Integer) As Boolean
         If id <= 0 Then
             Throw New ArgumentException("Seleccione un registro válido para eliminar.")
         End If
-        _estudianteDB.Delete(id)
-    End Sub
+
+        Return _estudianteDB.Delete(id)
+    End Function
 
     Private Sub ValidarEstudiante(p As Estudiante)
         If p Is Nothing Then Throw New ArgumentException("Datos requeridos.")

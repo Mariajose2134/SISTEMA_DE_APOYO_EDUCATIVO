@@ -9,7 +9,7 @@ Public Class DbHelper
     Public Sub New()
         _connectionString = ConfigurationManager.ConnectionStrings("ConexionApoyoEducativo").ConnectionString
     End Sub
-
+    ' Devuelve una conexión a la base de datos
     Public Function GetConnection() As SqlConnection
         Return New SqlConnection(_connectionString)
     End Function
@@ -25,7 +25,8 @@ Public Class DbHelper
             End Using
         End Using
     End Function
-    'Ejecuta una consulta SQL que devuelve resultados (SELECT)
+
+    ' Ejecuta una consulta SQL que devuelve resultados (SELECT)
     Public Function ExecuteQuery(query As String, Optional parameters As List(Of SqlParameter) = Nothing) As DataTable
         Dim dt As New DataTable()
         Using conn As SqlConnection = GetConnection()
